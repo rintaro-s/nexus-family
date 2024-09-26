@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <EditText
+            android:id="@+id/latEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Latitude"
+            android:inputType="numberDecimal" />
+
+    <EditText
+            android:id="@+id/lonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/latEditText"
+            android:hint="Enter Longitude"
+            android:inputType="numberDecimal" />
+
+    <Button
+            android:id="@+id/requestPermissionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lonEditText"
+            android:text="Request Permissions" />
+
+    <TextView
+            android:id="@+id/debugInfoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/requestPermissionsButton"
+            android:paddingTop="16dp"
+            android:text="Debug Information"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+    <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/debugInfoTextView"
+            android:paddingTop="8dp"
+            android:text="Distance to target: 0 meters"
+            android:textSize="16sp"
+            android:textColor="#FF0000" />
+</RelativeLayout>

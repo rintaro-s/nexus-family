@@ -1,0 +1,39 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <!-- タイマー表示 -->
+    <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+    <!-- タイマーセット用シークバー -->
+    <SeekBar
+            android:id="@+id/timerSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timerTextView"
+            android:layout_marginTop="16dp"
+            android:max="1200"
+            android:progress="0" />
+    <!-- 20 minutes -->
+
+
+    <!-- スタートボタン -->
+    <Button
+            android:id="@+id/startTimerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timerSeekBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Start Timer" />
+
+</RelativeLayout>
