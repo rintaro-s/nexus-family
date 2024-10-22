@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools">
+          package="com.lorinta.newproject">
 
-    <!-- 位置情報のパーミッション -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+
 
     <application
             android:allowBackup="true"
@@ -15,30 +17,23 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.NEXUSfamily">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- MainActivity: タイマー画面を持つメインアクティビティ -->
+        <!-- Main activity -->
         <activity
                 android:name=".MainActivity"
-                android:exported="true"
-                android:label="@string/app_name"
-                android:theme="@style/Theme.NEXUSfamily">
+                android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- TermsActivity: 利用規約画面 -->
-        <activity
-                android:name=".TermsActivity"
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <!-- LocationService: バックグラウンドで位置情報を取得するためのサービス -->
-        <service android:name=".LocationService"
-                 android:enabled="true"
-                 android:exported="false" />
-
+        <!-- Location service for background tracking -->
+        <service
+                android:name=".LocationService"
+                android:enabled="true"
+                android:exported="false"
+                android:foregroundServiceType="location" />
     </application>
-
 </manifest>

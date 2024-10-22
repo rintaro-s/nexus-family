@@ -1,4 +1,4 @@
-package com.lorinta.nexus_family
+package com.lorinta.newproject
 
 import org.junit.Test
 

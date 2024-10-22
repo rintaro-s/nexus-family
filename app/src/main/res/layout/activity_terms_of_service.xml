@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -6,15 +6,15 @@
               android:padding="16dp">
 
     <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tos_textview"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="利用規約に同意しますか？"
-            android:textSize="18sp"
-            android:paddingBottom="16dp" />
+            android:text="Terms of Service"
+            android:textSize="18sp" />
 
     <Button
-            android:id="@+id/agreeButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/accept_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="同意する" />
+            android:text="Accept" />
 </LinearLayout>

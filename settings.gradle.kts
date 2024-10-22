@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NEXUS-family"
+rootProject.name = "NewProject"
 include(":app")
