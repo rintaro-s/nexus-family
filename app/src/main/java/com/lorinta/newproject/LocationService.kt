@@ -23,7 +23,7 @@ class LocationService : Service() {
         longitude = 136.8186805
     }
     private val targetRadius = 500 // 500 meters
-    private val lineNotifyToken = "VqaiWrOso0aMtn2bnjEnIkLmMrLWEfhaq7p4jugSIWd" // Set your LINE Notify token here
+    private val lineNotifyToken = "aaaaaaaaaa" // Set your LINE Notify token here
 
     override fun onCreate() {
         super.onCreate()
